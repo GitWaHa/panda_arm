@@ -1,0 +1,1 @@
+rosrun moveit_kinematics create_ikfast_moveit_plugin.py --search_mode=OPTIMIZE_MAX_JOINT --srdf_filename=panda.srdf --robot_name_in_srdf=panda --moveit_config_pkg=panda_moveit_config panda panda_arm panda_panda_arm_ikfast_plugin panda_link0 panda_grasp_frame /home/waha/catkin_ws/src/panda_panda_arm_ikfast_plugin/src/panda_panda_arm_ikfast_solver.cpp

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>panda_grasp</name>
+  <version>0.7.2</version>
+  <description>The agile_grasp ROS package. AGILE stands for Antipodal Grasp Identification and LEarning. The package 
+  finds antipodal grasps in point clouds.</description>
+  <maintainer email="atp@ccs.neu.edu">Andreas ten Pas</maintainer>
+  <license>BSD</license>
+  <url type="website">http://wiki.ros.org/agile_grasp</url>
+  <author>Andreas ten Pas</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>eigen_conversions</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>liblapack-dev</build_depend>
+  <build_depend>libpcl-all-dev</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>pcl_conversions</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+
+  <exec_depend>cmake_modules</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>eigen_conversions</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>liblapack-dev</exec_depend>
+  <exec_depend>libpcl-all</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>pcl_conversions</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+
+  <build_depend>agile_grasp</build_depend>
+  <exec_depend>agile_grasp</exec_depend>
+
+  <build_depend>learn_service_pkg</build_depend>
+  <exec_depend>learn_service_pkg</exec_depend>
+
+  <build_depend>tf</build_depend>
+  <exec_depend>tf</exec_depend>
+
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>tf2_eigen</build_depend>
+  <build_depend>tf2_geometry_msgs</build_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_eigen</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+</package>

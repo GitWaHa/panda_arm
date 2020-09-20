@@ -1,0 +1,29 @@
+<launch>
+    <node name="transform_point_cloud" pkg="panda_grasp" type="transform_point_cloud" output="screen">
+        <!-- <remap from="/joint_states" to="/ROBOT/joint_states" /> -->
+    </node>
+
+    <node name="panda_action_server" pkg="panda_driver" type="panda_action_server" output="screen">
+        <!-- <remap from="/joint_states" to="/ROBOT/joint_states" /> -->
+    </node>
+
+
+    <arg name="debug" default="false" />
+    <!--The planning and execution components of MoveIt! configured to 
+      publish the current configuration of the robot (simulated or real) 
+      and the current state of the world as seen by the planner-->
+    <include file="$(find panda_moveit_config)/launch/move_group.launch">
+        <arg name="allow_trajectory_execution" value="true"/>
+        <arg name="fake_execution" value="false"/>
+        <arg name="info" value="true"/>
+        <arg name="debug" value="$(arg debug)"/>
+        <arg name="publish_monitored_planning_scene" value="true" />
+    </include>
+
+    <!--The visualization component of MoveIt!-->
+    <include file="$(find panda_moveit_config)/launch/moveit_rviz.launch">
+        <arg name="rviz_config" value="$(find panda_moveit_config)/launch/moveit.rviz"/>
+        <arg name="debug" value="$(arg debug)"/>
+    </include>
+
+</launch>
